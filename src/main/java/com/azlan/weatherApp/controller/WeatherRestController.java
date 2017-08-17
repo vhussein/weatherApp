@@ -1,5 +1,6 @@
 package com.azlan.weatherApp.controller;
 
+import com.azlan.weatherApp.model.City;
 import com.azlan.weatherApp.model.User;
 import com.azlan.weatherApp.model.Weather;
 import com.azlan.weatherApp.service.UserService;
@@ -8,6 +9,7 @@ import com.azlan.weatherApp.service.WeatherServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -28,6 +30,9 @@ public class WeatherRestController {
     @Autowired
     WeatherService weatherService;  //Service to get the weather details from the API
 
+    @Autowired
+    City city;
+
     @RequestMapping(value = "/weather/{cityName}", method = RequestMethod.GET)
     public ResponseEntity<Weather> getWeatherDetails(@PathVariable("cityName") String cityName)
     {
@@ -41,6 +46,24 @@ public class WeatherRestController {
         }
 
         return new ResponseEntity<Weather>(weather, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/cityDetails", method = RequestMethod.GET)
+    public ResponseEntity<City> getCityDetails()
+    {
+        logger.info("Calling getCityDetails() method");
+//        Weather weather = weatherService.getWeather(cityName);
+
+
+        logger.debug("This is the country " + city.getCountry().toString());
+
+//        if(weather.getCurrentObservation() == null)
+//        {
+//            logger.debug("NULL DATA RETURNED");
+//            return new ResponseEntity<Weather>(HttpStatus.NOT_FOUND);
+//        }
+
+        return new ResponseEntity<City>(city, HttpStatus.OK);
     }
      
 //    //-------------------Retrieve All Users--------------------------------------------------------

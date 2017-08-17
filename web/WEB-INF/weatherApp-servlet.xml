@@ -15,4 +15,9 @@
     <!--</bean>-->
     <mvc:resources mapping="/resources/**" location="/resources/" />
     <context:property-placeholder location="classpath:properties/cityProperties.properties"></context:property-placeholder>
+
+    <bean id="city" class="com.azlan.weatherApp.model.City">
+    <constructor-arg value="${weatherApp.country}" name="country"></constructor-arg>
+    <constructor-arg value="${weatherApp.city}" name="city"></constructor-arg>
+    </bean>
 </beans>

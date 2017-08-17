@@ -34,6 +34,11 @@
             <option value="Perth">Perth</option>
         </select><br>
 
+        <label>City Name: </label><br>
+        <select name="citySelect">
+            <option value="">--SELECT--</option>
+        </select>
+
         {{err}}
         <%--<label for="singleSelect"> Single select with "not selected" option and dynamic option values: </label><br>--%>
         <%--<select name="singleSelect" id="singleSelect" ng-model="data.singleSelect">--%>

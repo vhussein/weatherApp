@@ -2,6 +2,9 @@
     'use strict';
     angular.module('staticSelect', [])
         .controller('ExampleController', ['$scope', 'WeatherService', function($scope, WeatherService) {
+            $scope.selectedCity = null;
+            $scope.cityNameArray = [];
+
              $scope.data = {
                  city: 'Sydney'
              };
@@ -26,6 +29,10 @@
 
                 });
 
+            }
+
+            $scope.getCityDetails = function() {
+                WeatherService.getCityDetails();
             }
 
 
