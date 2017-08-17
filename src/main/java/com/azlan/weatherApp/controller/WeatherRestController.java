@@ -37,7 +37,7 @@ public class WeatherRestController {
         if(weather.getCurrentObservation() == null)
         {
             logger.debug("NULL DATA RETURNED");
-            return new ResponseEntity<Weather>(HttpStatus.NO_CONTENT);
+            return new ResponseEntity<Weather>(HttpStatus.NOT_FOUND);
         }
 
         return new ResponseEntity<Weather>(weather, HttpStatus.OK);

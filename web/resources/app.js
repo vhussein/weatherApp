@@ -18,21 +18,25 @@
 //     $scope.names = ["Emil", "Tobias", "Linus"];
 // });
 
-(function(angular) {
-    'use strict';
-    angular.module('staticSelect', [])
-        .controller('ExampleController', ['$scope', function($scope) {
-            $scope.data = {
-                singleSelect: null,
-                multipleSelect: [],
-                option1: 'option-1'
-            };
+// (function(angular) {
+//     'use strict';
+//     angular.module('staticSelect', [])
+//         .controller('ExampleController', ['$scope', function($scope) {
+//             $scope.data = {
+//                 singleSelect: null,
+//                 multipleSelect: [],
+//                 option1: 'option-1'
+//             };
+//
+//             $scope.forceUnknownOption = function() {
+//                 $scope.data.singleSelect = 'nonsense';
+//             };
+//         }]);
+// })(window.angular);
 
-            $scope.forceUnknownOption = function() {
-                $scope.data.singleSelect = 'nonsense';
-            };
-        }]);
-})(window.angular);
+'use strict';
+
+var App = angular.module('myApp',[]);
 
 /*
 Copyright 2017 Google Inc. All Rights Reserved.
