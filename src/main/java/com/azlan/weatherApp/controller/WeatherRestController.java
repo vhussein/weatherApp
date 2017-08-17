@@ -28,7 +28,7 @@ public class WeatherRestController {
     @Autowired
     WeatherService weatherService;  //Service to get the weather details from the API
 
-    @RequestMapping(value = "/{cityName}", method = RequestMethod.GET)
+    @RequestMapping(value = "/weather/{cityName}", method = RequestMethod.GET)
     public ResponseEntity<Weather> getWeatherDetails(@PathVariable("cityName") String cityName)
     {
         logger.info("Calling getWeatherDetails() method with " + cityName + " as param");

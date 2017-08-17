@@ -22,6 +22,7 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+
     <filter>
         <filter-name>CorsFilter</filter-name>
         <filter-class>com.azlan.weatherApp.config.CORSFilter</filter-class>
