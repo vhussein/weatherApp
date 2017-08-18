@@ -20,7 +20,7 @@ public class WeatherServiceImpl implements WeatherService {
 
         String endPoint = "http://api.wunderground.com/api/249fab9755e4ad90/geolookup/conditions/forecast/q/Australia/";
 
-        Weather weather = new Weather();
+        Weather weather;
         Gson gson = new Gson();
 
         logger.debug("This is the city name " + cityName);
@@ -32,6 +32,7 @@ public class WeatherServiceImpl implements WeatherService {
         logger.debug("THE ORIGINAL URI ==> " + endPoint);
         endPoint += cityName + ".json";
         logger.debug("THE URI ==> " + endPoint);
+        logger.info("Calling the URI from " + endPoint);
 
         weather = gson.fromJson(restTemplate.getForObject(endPoint, String.class), Weather.class);
 

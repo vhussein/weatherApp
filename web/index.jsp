@@ -8,68 +8,76 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <%--<script src="//code.angularjs.org/snapshot/angular.min.js"></script>--%>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
-    <script src="/resources/app.js"></script>
-    <script src="/resources/controller/weatherController.js"></script>
-    <script src="/resources/service/weatherService.js"></script>
+    <title>Weather Application</title>
+    <!-- Latest compiled and minified CSS -->
+    <%--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">--%>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
-<%--<body ng-app>--%>
-<%--<div data-ng-app="" data-ng-init="firstName='John'">--%>
-
-    <%--<p>The name is <span data-ng-bind="firstName"></span></p>--%>
-
-<%--</div>--%>
-<%--</body>--%>
 <body ng-app="staticSelect">
-<div ng-controller="ExampleController">
+<div ng-controller="ExampleController" class="container theme-showcase" role="main">
+
+    <div class="page-header">
+        <h1>Weather Application</h1>
+    </div>
+
     <form name="myForm">
-        <label> Single select: </label><br>
-        <select name="singleSelect" ng-model="data.singleSelect" ng-change="getWeather(data.singleSelect)">
-            <option value="Sydney">Sydney</option>
-            <option value="Melbourne">Melbourne</option>
-            <option value="Wollongong">Wollongong</option>
-            <option value="Perth">Perth</option>
-        </select><br>
 
-        <label>City Name: </label><br>
-        <select name="citySelect">
-            <option value="">--SELECT--</option>
+
+        <label>Please select your city:</label>
+        <select name="citySelect" ng-options="cityObj for cityObj in cityNameArray" ng-model="cityModel" ng-change="getWeather(cityModel)"
+                class="form-control btn btn-secondary dropdown-toggle">
+            <option value="">-- Please select your city --</option>
         </select>
+        <br>
+        <br>
 
-        {{err}}
-        <%--<label for="singleSelect"> Single select with "not selected" option and dynamic option values: </label><br>--%>
-        <%--<select name="singleSelect" id="singleSelect" ng-model="data.singleSelect">--%>
-            <%--<option value="">---Please select---</option> <!-- not selected / blank option -->--%>
-            <%--<option value="{{data.option1}}">Option 1</option> <!-- interpolation -->--%>
-            <%--<option value="option-2">Option 2</option>--%>
-        <%--</select><br>--%>
-        <%--<button ng-click="forceUnknownOption()">Force unknown option</button><br>--%>
-        <%--<tt>singleSelect = {{data.singleSelect}}</tt>--%>
+        <div ng-if="errorMessage" class="alert alert-danger" role="alert">{{ err }}</div>
 
-        <%--<hr>--%>
-        <%--<label for="multipleSelect"> Multiple select: </label><br>--%>
-        <%--<select name="multipleSelect" id="multipleSelect" ng-model="data.multipleSelect" multiple>--%>
-            <%--<option value="option-1">Option 1</option>--%>
-            <%--<option value="option-2">Option 2</option>--%>
-            <%--<option value="option-3">Option 3</option>--%>
-        <%--</select><br>--%>
-        <%--<tt>multipleSelect = {{data.multipleSelect}}</tt><br/>--%>
+        <div ng-if="hasData">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><b>Location Details</b></h3>
+                </div>
+                <div class="panel-body">Country: {{countryName}}</div>
+                <div class="panel-body">City: {{cityName}}</div>
+                <div class="panel-body">{{dateTime}}</div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><b>Weather Details</b></h3>
+                </div>
+                <div class="panel-body">Current Weather: {{weather}}</div>
+                <div class="panel-body">Current Temperature: {{temperature}}</div>
+                <div class="panel-body">Current Humidity: {{humidity}}</div>
+                <div class="panel-body">Current Wind: {{wind}} KM/H</div>
+                <div class="panel-body"><img src="{{imageUrl}}"></div>
+            </div>
+
+            <div class="page-header">
+                <h1>Weather Forecast</h1>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4" ng-repeat-start="forecastObj in forecastArray">
+                    <div ng-if="hasData" class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><b>{{forecastArray[$index].title}}</b></h3>
+                        </div>
+                        <div class="panel-body"><img src="{{forecastArray[$index].icon_url}}"></div>
+                        <div class="panel-body">{{forecastArray[$index].fcttext_metric}}</div>
+                    </div>
+                </div>
+                <div ng-repeat-end></div>
+            </div>
+        </div>
     </form>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<script src="/resources/app.js"></script>
+<script src="/resources/controller/weatherController.js"></script>
+<script src="/resources/service/weatherService.js"></script>
 </body>
-<%--<body ng-app="ngrepeatSelect">--%>
-<%--<div ng-controller="ExampleController">--%>
-    <%--<form name="myForm">--%>
-        <%--<label for="repeatSelect"> Repeat select: </label>--%>
-        <%--<select name="repeatSelect" id="repeatSelect" ng-model="data.model">--%>
-            <%--<option ng-repeat="option in data.availableOptions" value="{{option.id}}">{{option.name}}</option>--%>
-        <%--</select>--%>
-    <%--</form>--%>
-    <%--<hr>--%>
-    <%--<tt>model = {{data.model}}</tt><br/>--%>
-<%--</div>--%>
-<%--</body>--%>
 </html>

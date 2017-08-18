@@ -10,8 +10,8 @@ public class City {
 
     private static final Logger logger = LoggerFactory.getLogger(City.class);
 
-    @Value("${weatherApp.country}")
-    private String[] country;
+//    @Value("${weatherApp.country}")
+//    private String[] country;
 
     @Value("${weatherApp.city}")
     private String[] city;
@@ -21,18 +21,22 @@ public class City {
         logger.debug("DEFAULT CITY CONSTRUCTOR");
     }
 
-    public City(String[] country, String[] city) {
-        this.country = country;
+//    public City(String[] country, String[] city) {
+//        this.country = country;
+//        this.city = city;
+//    }
+
+    public City(String[] city) {
         this.city = city;
     }
 
-    public String[] getCountry() {
-        return country;
-    }
-
-    public void setCountry(String[] country) {
-        this.country = country;
-    }
+//    public String[] getCountry() {
+//        return country;
+//    }
+//
+//    public void setCountry(String[] country) {
+//        this.country = country;
+//    }
 
     public String[] getCity() {
         return city;
@@ -42,11 +46,18 @@ public class City {
         this.city = city;
     }
 
+//    @Override
+//    public String toString() {
+//        return "City{" +
+//                "country='" + country + '\'' +
+//                ", city='" + city + '\'' +
+//                '}';
+//    }
+
     @Override
     public String toString() {
         return "City{" +
-                "country='" + country + '\'' +
-                ", city='" + city + '\'' +
+                "city='" + city + '\'' +
                 '}';
     }
 }

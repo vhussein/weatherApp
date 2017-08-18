@@ -1,6 +1,5 @@
 package com.azlan.weatherApp.config;
 
-import com.azlan.weatherApp.service.WeatherServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
