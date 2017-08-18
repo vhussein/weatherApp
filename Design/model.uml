@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.azlan.weatherApp.model</OriginalElement>
+  <nodes>
+    <node x="1494.9999999999998" y="165.0">com.azlan.weatherApp.model.SnowNight</node>
+    <node x="4590.125" y="2120.0">com.azlan.weatherApp.model.Location</node>
+    <node x="0.0" y="3368.0">com.azlan.weatherApp.model.City</node>
+    <node x="1027.9999999999998" y="165.0">com.azlan.weatherApp.model.SnowDay</node>
+    <node x="1458.0" y="2285.0">com.azlan.weatherApp.model.Forecast</node>
+    <node x="237.0" y="0.0">com.azlan.weatherApp.model.Date</node>
+    <node x="3086.75" y="1401.0">com.azlan.weatherApp.model.Estimated</node>
+    <node x="3323.2272727272725" y="165.0">com.azlan.weatherApp.model.Low</node>
+    <node x="2846.75" y="1345.0">com.azlan.weatherApp.model.Image</node>
+    <node x="2807.2272727272725" y="143.0">com.azlan.weatherApp.model.Maxwind</node>
+    <node x="4319.125" y="1345.0">com.azlan.weatherApp.model.Features</node>
+    <node x="5114.375" y="844.0">com.azlan.weatherApp.model.Pws</node>
+    <node x="3120.2272727272725" y="165.0">com.azlan.weatherApp.model.High</node>
+    <node x="917.0231060606056" y="778.0">com.azlan.weatherApp.model.Forecastday</node>
+    <node x="1752.5" y="1367.0">com.azlan.weatherApp.model.Simpleforecast</node>
+    <node x="2222.75" y="1246.0">com.azlan.weatherApp.model.DisplayLocation</node>
+    <node x="3772.2272727272725" y="165.0">com.azlan.weatherApp.model.QpfDay</node>
+    <node x="4320.125" y="2274.0">com.azlan.weatherApp.model.Response</node>
+    <node x="3526.2272727272725" y="165.0">com.azlan.weatherApp.model.SnowAllday</node>
+    <node x="1260.9999999999998" y="165.0">com.azlan.weatherApp.model.QpfNight</node>
+    <node x="4877.125" y="1356.0">com.azlan.weatherApp.model.NearbyWeatherStations</node>
+    <node x="4611.375" y="121.0">com.azlan.weatherApp.model.Station</node>
+    <node x="3840.375" y="3114.0">com.azlan.weatherApp.model.Weather</node>
+    <node x="1844.125" y="1691.0">com.azlan.weatherApp.model.CurrentObservation</node>
+    <node x="1342.0231060606056" y="635.0">com.azlan.weatherApp.model.Forecastday_</node>
+    <node x="3506.625" y="1290.0">com.azlan.weatherApp.model.ObservationLocation</node>
+    <node x="4966.375" y="88.0">com.azlan.weatherApp.model.Station_</node>
+    <node x="981.5231060606054" y="1356.0">com.azlan.weatherApp.model.TxtForecast</node>
+    <node x="1737.9999999999998" y="143.0">com.azlan.weatherApp.model.Avewind</node>
+    <node x="4683.875" y="844.0">com.azlan.weatherApp.model.Airport</node>
+    <node x="0.0" y="165.0">com.azlan.weatherApp.model.QpfAllday</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.azlan.weatherApp.model.NearbyWeatherStations" target="com.azlan.weatherApp.model.Airport">
+      <point x="-33.75" y="-82.5" />
+      <point x="4978.375" y="1216.0" />
+      <point x="4826.375" y="1216.0" />
+      <point x="47.5" y="71.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.Forecastday_" target="com.azlan.weatherApp.model.Date">
+      <point x="-360.340909090909" y="-280.5" />
+      <point x="1510.1821969696966" y="585.0" />
+      <point x="815.25" y="585.0" />
+      <point x="192.75" y="247.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.Forecastday_" target="com.azlan.weatherApp.model.SnowDay">
+      <point x="-264.25" y="-280.5" />
+      <point x="1606.2731060606056" y="565.0" />
+      <point x="1187.7499999999998" y="565.0" />
+      <point x="53.25" y="82.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.Weather" target="com.azlan.weatherApp.model.CurrentObservation">
+      <point x="-72.75" y="-104.5" />
+      <point x="3961.625" y="3074.0" />
+      <point x="2458.125" y="3074.0" />
+      <point x="-614.0" y="676.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.Weather" target="com.azlan.weatherApp.model.Forecast">
+      <point x="-169.75" y="-104.5" />
+      <point x="3864.625" y="3094.0" />
+      <point x="1525.5" y="3094.0" />
+      <point x="-67.5" y="82.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.Forecastday_" target="com.azlan.weatherApp.model.QpfDay">
+      <point x="456.431818181818" y="-280.5" />
+      <point x="2326.9549242424237" y="605.0" />
+      <point x="3823.2272727272725" y="605.0" />
+      <point x="-51.0" y="82.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.Forecastday_" target="com.azlan.weatherApp.model.SnowNight">
+      <point x="-72.06818181818198" y="-280.5" />
+      <point x="1798.4549242424237" y="525.0" />
+      <point x="1662.2499999999998" y="525.0" />
+      <point x="55.75" y="82.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.Forecastday_" target="com.azlan.weatherApp.model.QpfNight">
+      <point x="-168.159090909091" y="-280.5" />
+      <point x="1702.3640151515146" y="545.0" />
+      <point x="1421.4999999999998" y="545.0" />
+      <point x="53.5" y="82.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.Airport" target="com.azlan.weatherApp.model.Station">
+      <point x="-47.5" y="-71.5" />
+      <point x="4731.375" y="615.0" />
+      <point x="4695.125" y="615.0" />
+      <point x="-83.75" y="126.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.Weather" target="com.azlan.weatherApp.model.Response">
+      <point x="24.25" y="-104.5" />
+      <point x="4058.625" y="3064.0" />
+      <point x="4382.625" y="3064.0" />
+      <point x="-62.5" y="93.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.Weather" target="com.azlan.weatherApp.model.Location">
+      <point x="169.75" y="-104.5" />
+      <point x="4204.125" y="3094.0" />
+      <point x="5223.125" y="3094.0" />
+      <point x="211.0" y="247.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.Simpleforecast" target="com.azlan.weatherApp.model.Forecastday_">
+      <point x="65.5" y="-71.5" />
+      <point x="1949.0" y="1226.0" />
+      <point x="2134.7731060606056" y="1226.0" />
+      <point x="264.25" y="280.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.Location" target="com.azlan.weatherApp.model.NearbyWeatherStations">
+      <point x="-211.0" y="-247.5" />
+      <point x="4801.125" y="1671.0" />
+      <point x="4944.625" y="1671.0" />
+      <point x="-67.5" y="82.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.CurrentObservation" target="com.azlan.weatherApp.model.Image">
+      <point x="-153.5" y="-676.5" />
+      <point x="2918.625" y="1671.0" />
+      <point x="3011.75" y="1671.0" />
+      <point x="55.0" y="93.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.TxtForecast" target="com.azlan.weatherApp.model.Forecastday">
+      <point x="-69.0" y="-82.5" />
+      <point x="1050.5231060606054" y="1226.0" />
+      <point x="1018.2731060606056" y="1226.0" />
+      <point x="-101.25" y="137.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.Forecast" target="com.azlan.weatherApp.model.TxtForecast">
+      <point x="-101.25" y="-82.5" />
+      <point x="1491.75" y="1671.0" />
+      <point x="1050.5231060606054" y="1671.0" />
+      <point x="-69.0" y="82.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.Forecastday_" target="com.azlan.weatherApp.model.High">
+      <point x="168.159090909091" y="-280.5" />
+      <point x="2038.6821969696966" y="545.0" />
+      <point x="3165.9772727272725" y="545.0" />
+      <point x="-45.75" y="82.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.Forecastday_" target="com.azlan.weatherApp.model.Low">
+      <point x="264.25" y="-280.5" />
+      <point x="2134.7731060606056" y="565.0" />
+      <point x="3368.9772727272725" y="565.0" />
+      <point x="-45.75" y="82.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.Forecastday_" target="com.azlan.weatherApp.model.Maxwind">
+      <point x="120.11363636363626" y="-280.5" />
+      <point x="1990.636742424242" y="535.0" />
+      <point x="3026.9772727272725" y="535.0" />
+      <point x="73.25" y="104.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.Response" target="com.azlan.weatherApp.model.Features">
+      <point x="62.5" y="-93.5" />
+      <point x="63.0" y="93.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.NearbyWeatherStations" target="com.azlan.weatherApp.model.Pws">
+      <point x="33.75" y="-82.5" />
+      <point x="5045.875" y="1216.0" />
+      <point x="5160.125" y="1216.0" />
+      <point x="-45.75" y="71.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.Forecastday_" target="com.azlan.weatherApp.model.SnowAllday">
+      <point x="408.3863636363635" y="-280.5" />
+      <point x="2278.909469696969" y="595.0" />
+      <point x="3695.7272727272725" y="595.0" />
+      <point x="56.5" y="82.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.CurrentObservation" target="com.azlan.weatherApp.model.Estimated">
+      <point x="153.5" y="-676.5" />
+      <point x="3225.625" y="1671.0" />
+      <point x="3132.5" y="1671.0" />
+      <point x="-45.75" y="37.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.Pws" target="com.azlan.weatherApp.model.Station_">
+      <point x="45.75" y="-71.5" />
+      <point x="5251.625" y="615.0" />
+      <point x="5325.625" y="615.0" />
+      <point x="119.75" y="159.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.CurrentObservation" target="com.azlan.weatherApp.model.ObservationLocation">
+      <point x="767.5" y="-676.5" />
+      <point x="3839.625" y="1671.0" />
+      <point x="3627.125" y="1671.0" />
+      <point x="-120.5" y="148.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.CurrentObservation" target="com.azlan.weatherApp.model.DisplayLocation">
+      <point x="-767.5" y="-676.5" />
+      <point x="2304.625" y="1661.0" />
+      <point x="2675.75" y="1661.0" />
+      <point x="151.0" y="192.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.Forecastday_" target="com.azlan.weatherApp.model.Avewind">
+      <point x="24.022727272727252" y="-280.5" />
+      <point x="1894.545833333333" y="515.0" />
+      <point x="1956.2499999999998" y="515.0" />
+      <point x="72.75" y="104.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.Forecastday_" target="com.azlan.weatherApp.model.QpfAllday">
+      <point x="-504.4772727272725" y="-280.5" />
+      <point x="1366.0458333333331" y="615.0" />
+      <point x="54.25" y="615.0" />
+      <point x="-54.25" y="82.5" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model.Forecast" target="com.azlan.weatherApp.model.Simpleforecast">
+      <point x="101.25" y="-82.5" />
+      <point x="1694.25" y="1671.0" />
+      <point x="1949.0" y="1671.0" />
+      <point x="65.5" y="71.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="476.9999999999999" y="702.2857142857142" />
+  <SelectedNodes>
+    <node>com.azlan.weatherApp.model.City</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

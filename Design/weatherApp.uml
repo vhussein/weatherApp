@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.azlan.weatherApp</OriginalElement>
+  <nodes>
+    <node x="1.1785714285714448" y="215.701171875">com.azlan.weatherApp.controller</node>
+    <node x="153.17857142857144" y="215.701171875">com.azlan.weatherApp.tests</node>
+    <node x="110.67857142857144" y="135.701171875">com.azlan.weatherApp.service</node>
+    <node x="0.0" y="290.701171875">com.azlan.weatherApp.config</node>
+    <node x="40.0" y="15.701171875">com.azlan.weatherApp.model</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.azlan.weatherApp.tests" target="com.azlan.weatherApp.service">
+      <point x="-35.0" y="-15.0" />
+      <point x="170.67857142857144" y="190.701171875" />
+      <point x="169.17857142857144" y="190.701171875" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.azlan.weatherApp.service" target="com.azlan.weatherApp.model">
+      <point x="0.0" y="-15.0" />
+      <point x="169.17857142857144" y="115.701171875" />
+      <point x="130.35714285714286" y="115.701171875" />
+      <point x="32.85714285714286" y="15.0" />
+    </edge>
+    <edge source="com.azlan.weatherApp.controller" target="com.azlan.weatherApp.service">
+      <point x="44.0" y="-15.0" />
+      <point x="111.17857142857144" y="190.701171875" />
+      <point x="130.17857142857144" y="190.701171875" />
+      <point x="-39.0" y="15.0" />
+    </edge>
+    <edge source="com.azlan.weatherApp.model" target="com.azlan.weatherApp.model">
+      <point x="-49.28571428571428" y="15.0" />
+      <point x="48.21428571428572" y="65.701171875" />
+      <point x="20.0" y="65.701171875" />
+      <point x="20.0" y="40.701171875" />
+      <point x="-57.5" y="10.0" />
+    </edge>
+    <edge source="com.azlan.weatherApp.tests" target="com.azlan.weatherApp.model">
+      <point x="35.0" y="-15.0" />
+      <point x="240.67857142857144" y="190.701171875" />
+      <point x="238.17857142857144" y="190.701171875" />
+      <point x="238.17857142857144" y="105.701171875" />
+      <point x="146.78571428571428" y="105.701171875" />
+      <point x="49.28571428571428" y="15.0" />
+    </edge>
+    <edge source="com.azlan.weatherApp.controller" target="com.azlan.weatherApp.model">
+      <point x="0.0" y="-15.0" />
+      <point x="67.17857142857144" y="190.701171875" />
+      <point x="57.87755102040818" y="190.701171875" />
+      <point x="57.87755102040818" y="115.701171875" />
+      <point x="113.92857142857143" y="115.701171875" />
+      <point x="16.42857142857143" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.2" x="409.25" y="279.25" />
+  <SelectedNodes>
+    <node>com.azlan.weatherApp.controller</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
