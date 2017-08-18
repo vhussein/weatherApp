@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>--%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Weather Application</title>
@@ -76,8 +78,14 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
-<script src="/resources/app.js"></script>
-<script src="/resources/controller/weatherController.js"></script>
-<script src="/resources/service/weatherService.js"></script>
+<%--<script src="/resources/app.js"></script>--%>
+<%--<script src="/resources/controller/weatherController.js"></script>--%>
+<%--<script src="/resources/service/weatherService.js"></script>--%>
+<%--<spring:url value="/resources/app.js" var="mainJS"></spring:url>--%>
+<%--<spring:url value="/resources/controller/weatherController.js" var="weatherControllerJS"></spring:url>--%>
+<%--<spring:url value="/resources/service/weatherService.js" var="weatherServiceJS"></spring:url>--%>
+<%--<script src="<c:url value="/resources/app.js" />"></script>--%>
+<script src="<c:url value="/resources/controller/weatherController.js" />"></script>
+<script src="<c:url value="/resources/service/weatherService.js" />"></script>
 </body>
 </html>
